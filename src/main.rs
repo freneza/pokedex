@@ -8,7 +8,7 @@ extern crate rouille;
 extern crate clap;
 extern crate serde;
 
-use clap::{Command};
+use clap::{Command, Arg};
 use repositories::pokemon::InMemoryRepository;
 use std::sync::Arc;
 
@@ -20,6 +20,10 @@ fn cli() -> Command {
             Command::new("cli")
             .about("Runs in CLI mode")
         )
+//        .subcommand(
+//            Command::new("sqlite")
+//            .arg(Arg::with_name("sqlite").long("sqlite").value_name("PATH"))
+//        )
 }
 
 fn main() {
